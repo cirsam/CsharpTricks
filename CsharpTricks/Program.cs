@@ -1,4 +1,5 @@
 ﻿using System;
+using CsharpTricks.Tricks;
 
 namespace CsharpTricks
 {
@@ -6,7 +7,8 @@ namespace CsharpTricks
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TuplesExamples tuples = new TuplesExamples();
+            OutKeywordExamples outKeyword = new OutKeywordExamples();
         }
     }
 }
