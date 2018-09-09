@@ -84,7 +84,7 @@ namespace CsharpTricks.Tricks
             Tuple<int, string, bool> GetItem = Tuple.Create(2,"Sam",false);
             Console.WriteLine("Tuple: Age = " + GetItem.Item1);
             Tuple<int, string, bool,Tuple<int, string, bool>> GetItemsn = new Tuple<int, string, bool, Tuple<int, string, bool>>(2, "Tom", true,GetItem);
-            Console.WriteLine("Tuple: Get Name of Nested Tuple= "+GetItemsn.Item4.Item2);
+            Console.WriteLine("Tuple: Get Name of Nested Tuple= "+GetItemsn.Item4.Item2+"\n");
         }
 
 

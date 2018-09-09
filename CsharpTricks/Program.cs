@@ -8,7 +8,9 @@ namespace CsharpTricks
         static void Main(string[] args)
         {
             TuplesExamples tuples = new TuplesExamples();
-            OutKeywordExamples outKeyword = new OutKeywordExamples();
+            RefKeywordExample refKeyword = new RefKeywordExample();
+            OutKeywordExample outKeyword = new OutKeywordExample();
+            ParamsKeywordExamples paramsKeywordExamples = new ParamsKeywordExamples();
         }
     }
 }
