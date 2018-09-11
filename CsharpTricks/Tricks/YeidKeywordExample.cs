@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CsharpTricks.Tricks
 {
@@ -16,6 +17,9 @@ namespace CsharpTricks.Tricks
             {
                 Console.WriteLine("Yeild: List of books ={0}",book_subset.Title);
             }
+
+            Console.WriteLine("\n");
+
         }
 
         static IEnumerable<Books> GetPricedBoods()
@@ -42,7 +46,6 @@ namespace CsharpTricks.Tricks
             _books.Add(new Books { ID = 1, Title = "Book10", Price = 100.90 });
         }
     }
-
 
     class Books
     {

@@ -12,6 +12,7 @@ namespace CsharpTricks
             OutKeywordExample outKeyword = new OutKeywordExample();
             ParamsKeywordExamples paramsKeywordExamples = new ParamsKeywordExamples();
             YeidKeywordExample yeidKeywordExample = new YeidKeywordExample();
+            DotForEachExamples dotEach = new DotForEachExamples();
         }
     }
 }

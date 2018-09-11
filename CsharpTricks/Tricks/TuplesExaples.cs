@@ -76,7 +76,7 @@ namespace CsharpTricks.Tricks
             var tuple_first_item_name = GetSequenceAndReturnTuples(TupleObject());
             Console.WriteLine("Tuple: The object values for the second item age IList of Tuple = " + tuple_first_item_name.age);
             Console.WriteLine(" ");
-            sequence.ToList().ForEach( p=> Add(p,p));
+            sequence.ToList().ForEach( p => Add(p,p));
 
             //Using create Tuple
             Tuple<int,string,bool> GetItems = new Tuple<int,string,bool>(2,"sam",true);
