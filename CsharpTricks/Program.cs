@@ -11,6 +11,7 @@ namespace CsharpTricks
             RefKeywordExample refKeyword = new RefKeywordExample();
             OutKeywordExample outKeyword = new OutKeywordExample();
             ParamsKeywordExamples paramsKeywordExamples = new ParamsKeywordExamples();
+            YeidKeywordExample yeidKeywordExample = new YeidKeywordExample();
         }
     }
 }
