@@ -13,6 +13,7 @@ namespace CsharpTricks
             ParamsKeywordExamples paramsKeywordExamples = new ParamsKeywordExamples();
             YeidKeywordExample yeidKeywordExample = new YeidKeywordExample();
             DotForEachExamples dotEach = new DotForEachExamples();
+            FuncKeywordExample func = new FuncKeywordExample();
         }
     }
 }

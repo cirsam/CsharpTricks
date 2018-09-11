@@ -69,7 +69,7 @@ namespace CsharpTricks.Tricks
             var name_item_name = data.FirstOrDefault().Item1;
             Console.WriteLine("Tuple: The object values for first item name = "+name_item_name);
 
-            //using real tubles
+            //using real tubles and Object
             IList<Tuple<string, int>> TupleObject() => new List<Tuple<string, int>>() { new Tuple<string, int>("Samuel", 4), new Tuple<string, int>("Mike", 4) , new Tuple<string, int>("Rick", 4) };
             int get_second_item_age = TupleObject().Where(x=>x.Item1=="Mike").FirstOrDefault().Item2;
             Console.WriteLine("Tuple: The object values for the second item age in the IList = "+get_second_item_age);
