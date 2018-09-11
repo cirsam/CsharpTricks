@@ -38,11 +38,16 @@ namespace CsharpTricks.Tricks
             Console.WriteLine($"Func: Sum of two numbers = {sumnumbers(2,5)} \n");
 
             //Perform logic or predicate
+            Func<float, double> calculateArea = r => 3.14 * MathF.Pow(r, 2);
+            Console.WriteLine($"Func: Calculate the area of a circle = { calculateArea(4)}");
+
             Func<int, int, bool> predicate = (x, y) => x == y;
             Console.WriteLine($"Func: Compare 2 and 5 and return boolean False = {predicate(2, 5)}");
 
             Func<int, string, bool> predicates = (x, y) => x < y.Length;
-            Console.WriteLine($"Func: Compare 2 and 5 and return boolean True = {predicates(2, "yams")} \n");
+            Console.WriteLine($"Func: Compare 2 and yams and return boolean True = {predicates(2, "yams")} \n");
+
+            //
         }
 
         static int GetPrice(IList<Books> arg)

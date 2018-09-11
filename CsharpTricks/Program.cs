@@ -14,6 +14,8 @@ namespace CsharpTricks
             YeidKeywordExample yeidKeywordExample = new YeidKeywordExample();
             DotForEachExamples dotEach = new DotForEachExamples();
             FuncKeywordExample func = new FuncKeywordExample();
+            ActionExample actionExample = new ActionExample();
+            PredicateExample predicate = new PredicateExample();
         }
     }
 }
