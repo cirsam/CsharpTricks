@@ -16,6 +16,7 @@ namespace CsharpTricks
             FuncKeywordExample func = new FuncKeywordExample();
             ActionExample actionExample = new ActionExample();
             PredicateExample predicate = new PredicateExample();
+            DelegatesExample deligates = new DelegatesExample();
         }
     }
 }

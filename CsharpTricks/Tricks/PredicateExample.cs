@@ -20,7 +20,7 @@ namespace CsharpTricks.Tricks
 
             if (!predicates(6))
             {
-                Console.WriteLine("Predicate: This is it " + predicates(6));
+                Console.WriteLine("Predicate: This is it " + predicates(6)+"\n");
             }
         }
     }
