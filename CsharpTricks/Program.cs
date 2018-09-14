@@ -17,6 +17,7 @@ namespace CsharpTricks
             ActionExample actionExample = new ActionExample();
             PredicateExample predicate = new PredicateExample();
             DelegatesExample deligates = new DelegatesExample();
+            GerenicTypesExample gerenicTypesExample = new GerenicTypesExample();
         }
     }
 }

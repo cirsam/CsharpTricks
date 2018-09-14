@@ -62,8 +62,9 @@ namespace CsharpTricks.Tricks
 
             //First way to call the reusable method by regular method call
             SomePredicateDelegate somePredicate = new SomePredicateDelegate(subset.IsgreaterThan);
-            IList<Books> subsetbooks = subset.ReUsableMethod(_books,x=>x.Price>50.90);
+            IList<Books> subsetbooks = subset.ReUsableMethod(_books,book=>book.Price>50.90);
             subsetbooks.ToList<Books>().ForEach(x => Console.WriteLine($"Delegate: using class method and lambda expression {x.Title} {x.Price}"));
+            Console.WriteLine("\n");
 
         }
 
