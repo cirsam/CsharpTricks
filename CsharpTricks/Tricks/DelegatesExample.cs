@@ -10,6 +10,7 @@ namespace CsharpTricks.Tricks
     delegate IList<Books> SomeObjectDelegate(IList<Books> books, SomePredicateDelegate predicate);
     delegate bool ReturnBooleanDelegate(int i);
     delegate bool ReturnBoolString(string somestring);
+    delegate void Someint(int x);
 
     public class DelegatesExample
     {
@@ -64,6 +65,21 @@ namespace CsharpTricks.Tricks
             SomePredicateDelegate somePredicate = new SomePredicateDelegate(subset.IsgreaterThan);
             IList<Books> subsetbooks = subset.ReUsableMethod(_books,book=>book.Price>50.90);
             subsetbooks.ToList<Books>().ForEach(x => Console.WriteLine($"Delegate: using class method and lambda expression {x.Title} {x.Price}"));
+
+            //multicast delegate
+            Someint someint = FirstMethod;
+            someint += SecondMethod;
+            someint -= ThirdMethod;
+            someint += GetBooksSubSet.ForthMethod;
+            someint.Invoke(8);
+
+            //Use event
+            GetBooksSubSet subsets = new GetBooksSubSet(_books);
+            subsets.SomeintHandler += FirstMethod;
+            subsets.SomeintHandler += SecondMethod;
+            subsets.SomeintHandler -= ThirdMethod;
+            subsets.Myevent(9);
+
             Console.WriteLine("\n");
 
         }
@@ -98,6 +114,21 @@ namespace CsharpTricks.Tricks
             }
         }
 
+        static void FirstMethod(int i)
+        {
+            Console.WriteLine("Delegate: First Method");
+        }
+
+        static void SecondMethod(int i)
+        {
+            Console.WriteLine("Delegate: Second Method");
+        }
+
+        static void ThirdMethod(int i)
+        {
+            Console.WriteLine("Delegate: Third Method");
+        }
+
         static void CreateBooks()
         {
             _books.Add(new Books { ID = 1, Title = "Book1", Price = 10.90 });
@@ -117,12 +148,15 @@ namespace CsharpTricks.Tricks
     internal class GetBooksSubSet
     {
         private IList<Books> _mybooks;
+        public event Someint SomeintHandler;
 
         public IList<Books> _books_subset
         {
             get { return SubsetofBooks(); }
             private set {  _mybooks = value; }
         }
+
+        public GetBooksSubSet(){ }
 
         public GetBooksSubSet(IList<Books> books)
         {
@@ -174,6 +208,16 @@ namespace CsharpTricks.Tricks
             }
 
             return false;
+        }
+
+        public static void ForthMethod(int i)
+        {
+            Console.WriteLine("Delegate: Forth Method");
+        }
+
+        public void Myevent(int val)
+        {
+            SomeintHandler?.Invoke(val);
         }
     }
 }
