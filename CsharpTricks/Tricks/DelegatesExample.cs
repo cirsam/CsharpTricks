@@ -81,7 +81,6 @@ namespace CsharpTricks.Tricks
             subsets.Myevent(9);
 
             Console.WriteLine("\n");
-
         }
 
         protected static string SimpleMethod(string some_string)
